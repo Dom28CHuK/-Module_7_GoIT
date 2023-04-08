@@ -1,16 +1,17 @@
-import classes.GooQuery;
+import classes.GooWordStat;
 
 public class Main {
     public static void main(String[] args) {
-        GooQuery query = new GooQuery("en", "capital");
+        //Word is [human], search freq is LOW
+        System.out.println(new GooWordStat("human", 10));
 
-        //en
-        System.out.println(query.getLanguage());
+        //Word is [mars], search freq is MEDIUM
+        System.out.println(new GooWordStat("mars", 10000));
 
-        //capital
-        System.out.println(query.getText());
+        //Word is [space], search freq is HIGH
+        System.out.println(new GooWordStat("space", 9965499));
 
-        //Searching [capital], using language: en
-        System.out.println(query);
+        //Word is [life], search freq is EXTRA HIGH
+        System.out.println(new GooWordStat("life", 564785654));
     }
 }
