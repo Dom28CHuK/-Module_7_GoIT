@@ -1,16 +1,12 @@
 import classes.Examples;
+import classes.GooSearchResult;
 
 public class Main {
     public static void main(String[] args) {
-        Examples examples = new Examples();
+        //test.com
+        System.out.println(new GooSearchResult("https://test.com").parseDomain());
 
-        String reversed = Examples.reverseStringWithNewObject("Hello World");
-        System.out.println(reversed);
-
-        String reversed1 = Examples.reverseStringWithoutAdditionalMemoryUsage("Hello World!");
-        System.out.println(reversed1);
-
-        String reversed2 = Examples.stringBuilderReverseExample("Hello, World!");
-        System.out.println(reversed2);
+        //apple.in.mars
+        System.out.println(new GooSearchResult("http://apple.in.mars").parseDomain());
     }
 }
