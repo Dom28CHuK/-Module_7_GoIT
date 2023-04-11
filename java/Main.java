@@ -1,17 +1,27 @@
 import classes.Phrase;
+import classes.WordSplitter;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        String[] words = {"alpha", "beta", "gamma"};
+//        String[] words = {"alpha", "beta", "gamma"};
+//
+//        Phrase phrase = new Phrase(words);
+//
+//        //alpha beta gamma
+//        System.out.println(phrase);
+//
+//        words[0] = "zero";
+//
+//        //alpha beta gamma
+//        System.out.println(phrase);
 
-        Phrase phrase = new Phrase(words);
+        WordSplitter wordSplitter = new WordSplitter();
 
-        //alpha beta gamma
-        System.out.println(phrase);
+        String[] words = wordSplitter.split("Hello      world");
 
-        words[0] = "zero";
-
-        //alpha beta gamma
-        System.out.println(phrase);
+        //[hello, world]
+        System.out.println(Arrays.toString(words));
     }
 }
