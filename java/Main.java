@@ -1,4 +1,5 @@
 import classes.Phrase;
+import classes.PunctuationMarkCounter;
 import classes.WordSplitter;
 
 import java.util.Arrays;
@@ -17,11 +18,22 @@ public class Main {
 //        //alpha beta gamma
 //        System.out.println(phrase);
 
-        WordSplitter wordSplitter = new WordSplitter();
+//        WordSplitter wordSplitter = new WordSplitter();
+//
+//        String[] words = wordSplitter.split("Hello      world");
+//
+//        //[hello, world]
+//        System.out.println(Arrays.toString(words));
 
-        String[] words = wordSplitter.split("Hello      world");
+        PunctuationMarkCounter counter = new PunctuationMarkCounter();
 
-        //[hello, world]
-        System.out.println(Arrays.toString(words));
+        //2
+        System.out.println(counter.count("Hello, world!"));
+
+        //1
+        System.out.println(counter.count("This is Sparta!"));
+
+        //1
+        System.out.println(counter.count("End."));
     }
 }
