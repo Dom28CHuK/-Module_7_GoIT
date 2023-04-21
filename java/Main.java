@@ -1,13 +1,13 @@
-import classes.DoubleSpaceCleaner;
+import classes.WordFreqCounter;
 
 public class Main {
     public static void main(String[] args) {
-        DoubleSpaceCleaner cleaner = new DoubleSpaceCleaner();
+        WordFreqCounter freqCounter = new WordFreqCounter();
 
-        //Hello World
-        System.out.println(cleaner.clean("Hello World"));
+        //0.5
+        System.out.println(freqCounter.countFreq("Hello Java", "java"));
 
-        //Hello World
-        System.out.println(cleaner.clean("       Hello              World          "));
+        //0
+        System.out.println(freqCounter.countFreq("Hello World", "java"));
     }
 }
