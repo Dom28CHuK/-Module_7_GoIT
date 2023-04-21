@@ -1,13 +1,10 @@
-import classes.WordFreqCounter;
+import classes.StringByteWorker;
 
 public class Main {
     public static void main(String[] args) {
-        WordFreqCounter freqCounter = new WordFreqCounter();
+        byte[] startBytes = {74, 97, 86, 97};
 
-        //0.5
-        System.out.println(freqCounter.countFreq("Hello Java", "java"));
-
-        //0
-        System.out.println(freqCounter.countFreq("Hello World", "java"));
+        //java
+        System.out.println(new StringByteWorker().process(startBytes));
     }
 }
