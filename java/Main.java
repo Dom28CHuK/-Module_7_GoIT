@@ -1,10 +1,17 @@
-import classes.StringByteWorker;
+import classes.ShortWordCounter;
 
 public class Main {
     public static void main(String[] args) {
-        byte[] startBytes = {74, 97, 86, 97};
+        //1
+        System.out.println(new ShortWordCounter().count("Java is great language", 2));
 
-        //java
-        System.out.println(new StringByteWorker().process(startBytes));
+        //2
+        System.out.println(new ShortWordCounter().count("Java is great language", 4));
+
+        //3
+        System.out.println(new ShortWordCounter().count("Java is great language", 5));
+
+        //4
+        System.out.println(new ShortWordCounter().count("Java is great language", 100));
     }
 }
