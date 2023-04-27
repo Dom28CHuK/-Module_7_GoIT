@@ -1,3 +1,5 @@
+import classes.WordDeleter;
+
 public class Main {
     public static void main(String[] args) {
         WordDeleter wordDeleter = new WordDeleter();
