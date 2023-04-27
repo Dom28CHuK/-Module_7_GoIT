@@ -1,3 +1,4 @@
+import classes.DigitText;
 import classes.SensitiveDataSearcher;
 import classes.WordDeleter;
 
@@ -11,12 +12,18 @@ public class Main {
 //        //This Sparta
 //        System.out.println(wordDeleter.remove("This is Sparta", new String[] {"is"}));
 
-        SensitiveDataSearcher searcher = new SensitiveDataSearcher();
-
-        //false
-        System.out.println(searcher.isSensitiveDataPresent("Hello world"));
+//        SensitiveDataSearcher searcher = new SensitiveDataSearcher();
+//
+//        //false
+//        System.out.println(searcher.isSensitiveDataPresent("Hello world"));
+//
+//        //true
+//        System.out.println(searcher.isSensitiveDataPresent("Pass: swordfish"));
 
         //true
-        System.out.println(searcher.isSensitiveDataPresent("Pass: swordfish"));
+        System.out.println(new DigitText().detect("23 50"));
+
+        //false
+        System.out.println(new DigitText().detect("Year 1990"));
     }
 }
