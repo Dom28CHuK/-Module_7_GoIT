@@ -1,13 +1,22 @@
+import classes.SensitiveDataSearcher;
 import classes.WordDeleter;
 
 public class Main {
     public static void main(String[] args) {
-        WordDeleter wordDeleter = new WordDeleter();
+//        WordDeleter wordDeleter = new WordDeleter();
+//
+//        //Hello
+//        System.out.println(wordDeleter.remove("Hello Java", new String[] {"Java"}));
+//
+//        //This Sparta
+//        System.out.println(wordDeleter.remove("This is Sparta", new String[] {"is"}));
 
-        //Hello
-        System.out.println(wordDeleter.remove("Hello Java", new String[] {"Java"}));
+        SensitiveDataSearcher searcher = new SensitiveDataSearcher();
 
-        //This Sparta
-        System.out.println(wordDeleter.remove("This is Sparta", new String[] {"is"}));
+        //false
+        System.out.println(searcher.isSensitiveDataPresent("Hello world"));
+
+        //true
+        System.out.println(searcher.isSensitiveDataPresent("Pass: swordfish"));
     }
 }
