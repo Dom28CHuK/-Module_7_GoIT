@@ -1,14 +1,11 @@
-import classes.MathDetector;
+import classes.AvgWordLength;
 
 public class Main {
     public static void main(String[] args) {
-        //true
-        System.out.println(new MathDetector().isMath("2+2=4"));
+        //6
+        System.out.println(new AvgWordLength().count("Launch Rocket"));
 
-        //false
-        System.out.println(new MathDetector().isMath("1992 is great year"));
-
-        //false
-        System.out.println(new MathDetector().isMath("Venus vs Earth"));
+        //4.5
+        System.out.println(new AvgWordLength().count("Life is strange thing"));
     }
 }
