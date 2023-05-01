@@ -1,11 +1,14 @@
-import classes.AvgWordLength;
+import classes.DigitExtracter;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        //6
-        System.out.println(new AvgWordLength().count("Launch Rocket"));
+        DigitExtracter digitExtracter = new DigitExtracter();
 
-        //4.5
-        System.out.println(new AvgWordLength().count("Life is strange thing"));
+        int[] extracted = digitExtracter.extract("april 5, year 2000");
+
+        //[5, 2, 0, 0, 0]
+        System.out.println(Arrays.toString(extracted));
     }
 }
