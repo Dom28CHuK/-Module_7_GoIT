@@ -1,14 +1,16 @@
-import classes.DigitExtracter;
+import classes.BigOrSmall;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        DigitExtracter digitExtracter = new DigitExtracter();
+        //Small
+        System.out.println(new BigOrSmall().calculate("Java"));
 
-        int[] extracted = digitExtracter.extract("april 5, year 2000");
+        //Big
+        System.out.println(new BigOrSmall().calculate("JAVA"));
 
-        //[5, 2, 0, 0, 0]
-        System.out.println(Arrays.toString(extracted));
+        //Same
+        System.out.println(new BigOrSmall().calculate("jAvA"));
     }
 }
