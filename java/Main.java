@@ -1,11 +1,11 @@
-import classes.WaterCounter;
+import classes.EmailDetector;
 
 public class Main {
     public static void main(String[] args) {
-        //0.07692307692307693
-        System.out.println(new WaterCounter().count("Moon invaders"));
+        //true
+        System.out.println(new EmailDetector().isPresent("This email is no-reply@goo.com"));
 
-        //0
-        System.out.println(new WaterCounter().count("NoWater"));
+        //false
+        System.out.println(new EmailDetector().isPresent("No email present, but @ there"));
     }
 }
