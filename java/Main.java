@@ -1,16 +1,14 @@
-import classes.BigOrSmall;
-
-import java.util.Arrays;
+import classes.WordCombine;
 
 public class Main {
     public static void main(String[] args) {
-        //Small
-        System.out.println(new BigOrSmall().calculate("Java"));
+        //true
+        System.out.println(new WordCombine().canCombine("Forest", "tor"));
 
-        //Big
-        System.out.println(new BigOrSmall().calculate("JAVA"));
+        //true
+        System.out.println(new WordCombine().canCombine("Magic", "Mama"));
 
-        //Same
-        System.out.println(new BigOrSmall().calculate("jAvA"));
+        //false
+        System.out.println(new WordCombine().canCombine("War", "Piece"));
     }
 }
