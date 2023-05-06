@@ -1,14 +1,11 @@
-import classes.WordCombine;
+import classes.WaterCounter;
 
 public class Main {
     public static void main(String[] args) {
-        //true
-        System.out.println(new WordCombine().canCombine("Forest", "tor"));
+        //0.07692307692307693
+        System.out.println(new WaterCounter().count("Moon invaders"));
 
-        //true
-        System.out.println(new WordCombine().canCombine("Magic", "Mama"));
-
-        //false
-        System.out.println(new WordCombine().canCombine("War", "Piece"));
+        //0
+        System.out.println(new WaterCounter().count("NoWater"));
     }
 }
