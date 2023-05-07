@@ -5,8 +5,9 @@ import java.util.regex.Pattern;
 
 public class EmailDetector {
     public boolean isPresent(String text) {
-        Pattern pattern = Pattern.compile("xx@xx");
-        Matcher matcher = pattern.matcher(" ");
+        String regex = "\\S{2,}@\\S{2,}";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(text);
         return matcher.find();
     }
 }
